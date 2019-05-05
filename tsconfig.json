@@ -16,7 +16,6 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "extends": "./tsconfig.json",
   "compileOnSave": true,
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts", "public", "yarn.lock"]
