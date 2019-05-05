@@ -1,10 +1,10 @@
 export const getDomain = () => {
   if (isProduction()) {
     // TODO: insert prod url
-    return "https://jsonplaceholder.typicode.com";
+    return "";
   }
-  // TODO: insert prod url
-  return "localhost:8080";
+  // TODO: change this with localhost
+  return "https://jsonplaceholder.typicode.com";
 };
 
 const isProduction = () => {

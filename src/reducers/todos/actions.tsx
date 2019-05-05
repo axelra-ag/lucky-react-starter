@@ -23,6 +23,7 @@ export const fetchTodos = (): any => {
         });
       })
       .catch((error: string) => {
+        console.log(error);
         dispatch({
           type: ActionTypes.ERROR_TODOS,
           error,

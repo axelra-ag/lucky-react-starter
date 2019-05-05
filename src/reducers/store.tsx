@@ -9,7 +9,7 @@ export type RootState = {
 };
 
 const rootReducer = combineReducers({
-  todos: todoReducer
+  todos: todoReducer()
 });
 
 const store = createStore(
