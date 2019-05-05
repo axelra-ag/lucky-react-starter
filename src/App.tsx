@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { __COLORS } from "./layout/Theme";
 import MyImage, { AssetType } from "./views/Figure";
 import MainRouter from "./routes/MainRouter";
-import { Routes } from "./routes/Routes";
-
 const Container = styled.div`
   display: flex;
   align-items: center;

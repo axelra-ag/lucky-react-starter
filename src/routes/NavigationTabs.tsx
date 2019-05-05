@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { __COLORS } from "../layout/Theme";
-import { Routes } from "./Routes";
 import MyIcon, { IconTypes } from "../views/Icon";
 
 const Container = styled.div`
