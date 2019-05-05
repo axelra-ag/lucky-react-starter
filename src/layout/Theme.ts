@@ -10,28 +10,6 @@ export const MainTheme: CSSProperties & Props = {
   // add more general CSS properties here
 };
 
-// You can either import a Google Font: https://fonts.google.com
-// Or declare a custom font: https://tinyurl.com/y6omstqa
-// eslint-disable-next-line no-unexpected-multiline
-export const GlobalStyle = createGlobalStyle<{
-  theme: ThemeProviderProps<any>;
-}>`
-  @import url(${MainTheme.googleUrl});
-  html {
-    font-family: ${(p: ThemeProviderProps<any>) => p.theme.fontFamily};
-  }
-  body {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    line-height: 1;
-    font-weight: inherit;
-    font-style: inherit;
-    font-size: 100%;
-    font-family: inherit;
-  }
-`;
-
 // Colors Palette https://colorhunt.co/
 export enum __COLORS {
   PRIMARY = "#f38181",
@@ -54,3 +32,34 @@ export enum __GRAY_SCALE {
   _900 = "#212529",
   _BLACK = "#000"
 }
+
+// You can either import a Google Font: https://fonts.google.com
+// Or declare a custom font: https://tinyurl.com/y6omstqa
+// eslint-disable-next-line no-unexpected-multiline
+export const GlobalStyle = createGlobalStyle<{
+  theme: ThemeProviderProps<any>;
+}>`
+  @import url(${MainTheme.googleUrl});
+  html {
+    font-family: ${(p: ThemeProviderProps<any>) => p.theme.fontFamily};
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    line-height: 1;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    color: ${__COLORS.PRIMARY};
+    font-weight: 100;
+  }
+  
+  p {
+    word-break: break-all;
+    line-height: 1.4;
+  }
+`;

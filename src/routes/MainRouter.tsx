@@ -9,11 +9,17 @@ import {
 import Typography from "../components/Typography";
 import ReduxExample from "../components/ReduxExample";
 import NavigationTabs from "./NavigationTabs";
+import { __GRAY_SCALE } from "../layout/Theme";
 
 const Container = styled.div``;
 
 const Routes = styled.div`
   margin-top: 2em;
+  min-height: 300px;
+  border: 1px solid ${__GRAY_SCALE._200};
+  border-radius: 5px;
+  width: 500px;
+  padding: 2rem;
 `;
 
 let initialRoute = "/typography";
