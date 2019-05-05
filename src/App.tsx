@@ -3,11 +3,13 @@ import styled from "styled-components";
 import { __COLORS } from "./layout/Theme";
 import MyImage, { AssetType } from "./views/Figure";
 import MainRouter from "./routes/MainRouter";
+import { BounceIn } from "./layout/UI/Animations/BounceIn";
 const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
+  animation: ${BounceIn} 1s both;
 `;
 
 const Header = styled.header`
