@@ -4,7 +4,7 @@ import styled from "styled-components";
 export enum AssetType {
   IMAGE,
   LOGO
-  // add more based on the assets folder under /public
+  // add more attributes here based on the assets folder under /public
 }
 
 const Img = styled.img``;

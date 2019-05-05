@@ -39,7 +39,7 @@ const App: React.FC = () => {
         <Logo source={"/logo.png"} assetType={AssetType.LOGO} />
         <AppTitle>Have fun with React :-)</AppTitle>
       </Header>
-      <MainRouter initialRoute={Routes.TYPOGRAPHY} />
+      <MainRouter />
     </Container>
   );
 };

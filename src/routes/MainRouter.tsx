@@ -7,29 +7,37 @@ import {
   Redirect
 } from "react-router-dom";
 import Typography from "../components/Typography";
-import { Routes } from "./Routes";
+import ReduxExample from "../components/ReduxExample";
+import NavigationTabs from "./NavigationTabs";
 
 const Container = styled.div``;
 
-type Props = {
-  initialRoute: Routes;
-};
-const MainRouter = ({ initialRoute }: Props) => {
+const Routes = styled.div`
+  margin-top: 2em;
+`;
+
+let initialRoute = "/typography";
+
+const MainRouter = () => {
   return (
     <Container>
       <Router>
-        <Switch>
-          <Route component={Typography} path={`/${Routes.TYPOGRAPHY}`} exact />
+        <NavigationTabs />
+        <Routes>
+          <Switch>
+            <Route component={Typography} path={`/typography`} exact />
+            <Route component={ReduxExample} path={`/redux`} exact />
 
-          {/*Intentionally left at the bottom*/}
-          <Route
-            exact
-            path={"*"}
-            render={() => {
-              return <Redirect to={`/${initialRoute}`} />;
-            }}
-          />
-        </Switch>
+            {/*Intentionally left at the bottom*/}
+            <Route
+              exact
+              path={"*"}
+              render={() => {
+                return <Redirect to={`/${initialRoute}`} />;
+              }}
+            />
+          </Switch>
+        </Routes>
       </Router>
     </Container>
   );
