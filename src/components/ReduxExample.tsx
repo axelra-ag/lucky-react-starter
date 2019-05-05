@@ -6,7 +6,7 @@ import { fetchTodos } from "../reducers/todos/actions";
 import { connect } from "react-redux";
 import { Todo } from "../model/Todo";
 import { __ALERTS, __COLORS, __GRAY_SCALE, MainTheme } from "../layout/Theme";
-import { Spinner } from "../views/Spinners/Spinner";
+import { Spinner } from "../layout/UI/Spinners/Spinner";
 import { getAlphaColor } from "../helpers/AlphaColor";
 
 const Container = styled.div`

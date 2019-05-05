@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { __COLORS } from "../../layout/Theme";
+import { __COLORS } from "../../Theme";
 
 const Animation = keyframes`
     0%, 100% {
