@@ -1,24 +1,42 @@
 import React from "react";
 import styled from "styled-components";
 import { __COLORS } from "./layout/Theme";
+import MyImage, { AssetType } from "./views/Figure";
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   min-height: 100vh;
+`;
+
+const Header = styled.header`
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const AppTitle = styled.h1`
   color: ${__COLORS.PRIMARY};
   font-weight: 100;
-  margin-top: 2em;
   font-size: calc(18px + 2vmin);
+`;
+
+const Logo = styled(MyImage)`
+  max-width: 100%;
+  height: auto;
+  width: 40px;
+  filter: grayscale(1);
 `;
 
 const App: React.FC = () => {
   return (
     <Container>
-      <AppTitle>Have fun with React :-)</AppTitle>
+      <Header>
+        <Logo source={"/logo.png"} assetType={AssetType.LOGO} />
+        <AppTitle>Have fun with React :-)</AppTitle>
+      </Header>
     </Container>
   );
 };
