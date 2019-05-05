@@ -13,6 +13,8 @@ export const fetchTodos = (): any => {
       loading: true
     });
 
+    //dummy promise
+    await new Promise(resolve => setTimeout(resolve, 2000));
     fetch(`${getDomain()}/todos`, HTTP_OPTIONS(PROTOCOL_METHOD.GET))
       .then(res => res.json())
       .then((todos: Todo[]) => {

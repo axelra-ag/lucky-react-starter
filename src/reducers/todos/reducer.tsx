@@ -8,7 +8,7 @@ import {
 
 const initialState: TodoState = {
   todos: [],
-  loading: true
+  loading: false
 };
 
 const todoReducer = () => {

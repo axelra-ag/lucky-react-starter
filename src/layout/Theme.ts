@@ -6,7 +6,8 @@ type Props = {
 };
 export const MainTheme: CSSProperties & Props = {
   fontFamily: "Gothic A1, sans-serif",
-  googleUrl: "https://fonts.googleapis.com/css?family=Gothic+A1:200,400,700"
+  googleUrl: "https://fonts.googleapis.com/css?family=Gothic+A1:200,400,700",
+  boxShadow: "0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08)"
   // add more general CSS properties here
 };
 
@@ -33,6 +34,12 @@ export enum __GRAY_SCALE {
   _BLACK = "#000"
 }
 
+export enum __ALERTS {
+  INFO = "#11cdef",
+  SUCCESS = "#2ece89",
+  WARNING = "#fb6240",
+  ERROR = "#f5365c"
+}
 // You can either import a Google Font: https://fonts.google.com
 // Or declare a custom font: https://tinyurl.com/y6omstqa
 // eslint-disable-next-line no-unexpected-multiline
@@ -59,7 +66,7 @@ export const GlobalStyle = createGlobalStyle<{
   }
   
   p {
-    word-break: break-all;
+    word-break: break-word;
     line-height: 1.4;
   }
 `;

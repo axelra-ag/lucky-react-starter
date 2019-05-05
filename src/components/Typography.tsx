@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { __COLORS } from "../layout/Theme";
+import { __COLORS, __GRAY_SCALE } from "../layout/Theme";
 
 const Container = styled.div``;
 
@@ -11,7 +11,7 @@ const Colors = styled.div`
   display: flex;
 `;
 
-const Color = styled.div<{ background: __COLORS }>`
+const Color = styled.div<{ background: __COLORS | __GRAY_SCALE }>`
   &:first-of-type {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -20,7 +20,7 @@ const Color = styled.div<{ background: __COLORS }>`
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
-  padding: 2rem;
+  padding: 1.2rem;
   flex: 1;
   background: ${props => props.background};
 `;
@@ -45,12 +45,24 @@ class Typography extends Component<Props, State> {
           scrambled it to make a type specimen book. It has survived not only
           five centuries,{" "}
         </p>
-        <h1>Colors Palette </h1>
+        <h2>Colors Palette </h2>
         <Colors>
           <Color background={__COLORS.PRIMARY} />
           <Color background={__COLORS.SECONDARY} />
           <Color background={__COLORS.TERTRIARY} />
           <Color background={__COLORS.FOURTH} />
+        </Colors>
+        <h2>Gray Scale</h2>
+        <Colors>
+          <Color background={__GRAY_SCALE._100} />
+          <Color background={__GRAY_SCALE._200} />
+          <Color background={__GRAY_SCALE._300} />
+          <Color background={__GRAY_SCALE._400} />
+          <Color background={__GRAY_SCALE._500} />
+          <Color background={__GRAY_SCALE._600} />
+          <Color background={__GRAY_SCALE._700} />
+          <Color background={__GRAY_SCALE._800} />
+          <Color background={__GRAY_SCALE._900} />
         </Colors>
       </Container>
     );

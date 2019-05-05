@@ -14,6 +14,8 @@ import { __GRAY_SCALE } from "../layout/Theme";
 const Container = styled.div``;
 
 const Routes = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-top: 2em;
   min-height: 300px;
   border: 1px solid ${__GRAY_SCALE._200};
