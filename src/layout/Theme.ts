@@ -1,8 +1,12 @@
 import { CSSProperties } from "react";
 import { createGlobalStyle, ThemeProviderProps } from "styled-components";
 
-export const MainTheme: CSSProperties = {
-  fontFamily: "Gothic A1, sans-serif"
+type Props = {
+  googleUrl: string;
+};
+export const MainTheme: CSSProperties & Props = {
+  fontFamily: "Gothic A1, sans-serif",
+  googleUrl: "https://fonts.googleapis.com/css?family=Gothic+A1:200,400,700"
   // add more general CSS properties here
 };
 
@@ -12,7 +16,7 @@ export const MainTheme: CSSProperties = {
 export const GlobalStyle = createGlobalStyle<{
   theme: ThemeProviderProps<any>;
 }>`
-  @import url('https://fonts.googleapis.com/css?family=Gothic+A1');  
+  @import url(${MainTheme.googleUrl});
   html {
     font-family: ${(p: ThemeProviderProps<any>) => p.theme.fontFamily};
   }
