@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/lucky-react-starter/static/js/main.beba1ecf.chunk.js",
+    "main.js.map": "/lucky-react-starter/static/js/main.beba1ecf.chunk.js.map",
+    "runtime~main.js": "/lucky-react-starter/static/js/runtime~main.4b49b22b.js",
+    "runtime~main.js.map": "/lucky-react-starter/static/js/runtime~main.4b49b22b.js.map",
+    "static/js/2.c201c964.chunk.js": "/lucky-react-starter/static/js/2.c201c964.chunk.js",
+    "static/js/2.c201c964.chunk.js.map": "/lucky-react-starter/static/js/2.c201c964.chunk.js.map",
+    "index.html": "/lucky-react-starter/index.html",
+    "precache-manifest.92f9322c83c27587b7d403e9d57de336.js": "/lucky-react-starter/precache-manifest.92f9322c83c27587b7d403e9d57de336.js",
+    "service-worker.js": "/lucky-react-starter/service-worker.js"
+  }
+}
