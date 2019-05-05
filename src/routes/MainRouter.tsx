@@ -34,8 +34,6 @@ const RoutesContainer = styled.div`
   `};
 `;
 
-let initialRoute = "/typography";
-
 const MainRouter = () => {
   return (
     <Container>
@@ -55,7 +53,7 @@ const MainRouter = () => {
               exact
               path={"*"}
               render={() => {
-                return <Redirect to={`/${initialRoute}`} />;
+                return <Redirect to={Routes.TYPOGRAPHY} />;
               }}
             />
           </Switch>
