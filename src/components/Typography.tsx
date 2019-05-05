@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { __COLORS, __GRAY_SCALE } from "../layout/Theme";
+import { __ALERTS, __COLORS, __GRAY_SCALE } from "../layout/Theme";
 
 const Container = styled.div``;
 
@@ -9,9 +9,10 @@ type Props = {};
 
 const Colors = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
-const Color = styled.div<{ background: __COLORS | __GRAY_SCALE }>`
+const Color = styled.div<{ background: __COLORS | __GRAY_SCALE | __ALERTS }>`
   &:first-of-type {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -64,6 +65,7 @@ class Typography extends Component<Props, State> {
           <Color background={__GRAY_SCALE._800} />
           <Color background={__GRAY_SCALE._900} />
         </Colors>
+
       </Container>
     );
   }

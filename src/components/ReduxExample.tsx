@@ -54,15 +54,16 @@ const TodoContainer = styled.div<{ theme: ThemeProviderProps<any> }>`
 
 const Title = styled.p`
   margin: 0 1rem;
+  color: ${__COLORS.BLACK};
 `;
 
 const Label = styled.div<{ completed: boolean }>`
   background: ${props =>
     props.completed
       ? getAlphaColor(0.15, __ALERTS.SUCCESS)
-      : getAlphaColor(0.15, __ALERTS.ERROR)};
-  color: ${props => (props.completed ? __ALERTS.SUCCESS : __ALERTS.ERROR)};
-  padding: 4px 2px;
+      : getAlphaColor(0.15, __ALERTS.WARNING)};
+  color: ${props => (props.completed ? __ALERTS.SUCCESS : __ALERTS.WARNING)};
+  padding: 4px 3px;
   border-radius: 4px;
   font-size: 12px;
   margin-left: auto;

@@ -10,6 +10,8 @@ import Typography from "../components/Typography";
 import ReduxExample from "../components/ReduxExample";
 import NavigationTabs from "./NavigationTabs";
 import { __GRAY_SCALE } from "../layout/Theme";
+import Pictures from "../components/Pictures";
+import { EXTRA_SMALL_DEVICES, LARGE_DEVICES } from "../layout/Mobile";
 
 const Container = styled.div``;
 
@@ -22,6 +24,13 @@ const Routes = styled.div`
   border-radius: 5px;
   width: 500px;
   padding: 2rem;
+
+  ${EXTRA_SMALL_DEVICES`
+   width: 260px;
+   `};
+  ${LARGE_DEVICES`
+   width: 550px;
+  `};
 `;
 
 let initialRoute = "/typography";
@@ -35,6 +44,7 @@ const MainRouter = () => {
           <Switch>
             <Route component={Typography} path={`/typography`} exact />
             <Route component={ReduxExample} path={`/redux`} exact />
+            <Route component={Pictures} path={`/pictures`} exact />
 
             {/*Intentionally left at the bottom*/}
             <Route

@@ -63,6 +63,11 @@ export const GlobalStyle = createGlobalStyle<{
   h1, h2, h3, h4, h5, h6, p {
     color: ${__COLORS.PRIMARY};
     font-weight: 100;
+    line-height: 1.4;
+  }
+  
+  h1 {
+   font-size: calc(22.28px + 2vmin);
   }
   
   p {

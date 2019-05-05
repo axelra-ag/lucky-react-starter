@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { __COLORS } from "../layout/Theme";
 import MyIcon, { IconTypes } from "../views/Icon";
+import { EXTRA_SMALL_DEVICES } from "../layout/Mobile";
 
 const Container = styled.div`
   display: flex;
+  justify-content: center;
 `;
-
-type Props = {};
 
 const IconContainer = styled.div`
   display: flex;
@@ -44,6 +44,12 @@ export const NavigationLink = styled(NavLink)`
   }
 `;
 
+const Title = styled.small`
+  ${EXTRA_SMALL_DEVICES`
+    display: none;
+  `};
+`;
+
 NavigationLink.defaultProps = {
   activeClassName: "active"
 };
@@ -54,14 +60,21 @@ const NavigationTabs = () => {
       <NavigationLink to={"/typography"}>
         <IconContainer>
           <MyIcon name={IconTypes.TYPOGRAPHY} color={__COLORS.PRIMARY} />
-          <small>Typography</small>
+          <Title>Typography</Title>
         </IconContainer>
       </NavigationLink>
 
       <NavigationLink to={"/redux"}>
         <IconContainer>
           <MyIcon name={IconTypes.REDUX} color={__COLORS.PRIMARY} />
-          <small>Redux</small>
+          <Title>Redux</Title>
+        </IconContainer>
+      </NavigationLink>
+
+      <NavigationLink to={"/pictures"}>
+        <IconContainer>
+          <MyIcon name={IconTypes.PICTURE} color={__COLORS.PRIMARY} />
+          <Title>Pictures</Title>
         </IconContainer>
       </NavigationLink>
     </Container>
