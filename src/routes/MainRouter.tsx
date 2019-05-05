@@ -51,7 +51,7 @@ const MainRouter = () => {
             {/*Intentionally left at the bottom*/}
             <Route
               exact
-              path={"/*"}
+              path={"/"}
               render={() => {
                 return <Redirect to={Routes.TYPOGRAPHY} />;
               }}
