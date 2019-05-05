@@ -19,11 +19,11 @@ type Props = {
 const getPrefix = (assetType: AssetType) => {
   switch (assetType) {
     case AssetType.IMAGE:
-      return "./assets/images";
+      return "./../assets/images";
     case AssetType.LOGO:
-      return "./assets/logos";
+      return "./../assets/logos";
     default:
-      return "./assets";
+      return "./../assets";
   }
 };
 

@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { __COLORS } from "./layout/Theme";
 import MyImage, { AssetType } from "./views/Figure";
+import MainRouter from "./routes/MainRouter";
+import { Routes } from "./routes/Routes";
 
 const Container = styled.div`
   display: flex;
@@ -37,6 +39,7 @@ const App: React.FC = () => {
         <Logo source={"/logo.png"} assetType={AssetType.LOGO} />
         <AppTitle>Have fun with React :-)</AppTitle>
       </Header>
+      <MainRouter initialRoute={Routes.TYPOGRAPHY} />
     </Container>
   );
 };

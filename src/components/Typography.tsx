@@ -6,14 +6,14 @@ const Container = styled.div``;
 type State = {};
 type Props = {};
 
-class ClassExample extends Component<Props, State> {
+class Typography extends Component<Props, State> {
   state = {};
 
   componentDidMount() {}
 
   render() {
-    return <Container>ClassExample Component</Container>;
+    return <Container>Typography Component</Container>;
   }
 }
 
-export default ClassExample;
+export default Typography;
