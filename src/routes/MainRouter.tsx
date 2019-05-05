@@ -12,7 +12,7 @@ import NavigationTabs from "./NavigationTabs";
 import { __GRAY_SCALE } from "../layout/Theme";
 import Pictures from "../components/Pictures";
 import { EXTRA_SMALL_DEVICES, LARGE_DEVICES } from "../layout/Mobile";
-import { Routes } from "./Routes";
+import {PICTURES, REDUX, TYPOGRAPHY} from "./Routes";
 
 const Container = styled.div``;
 
@@ -43,17 +43,17 @@ const MainRouter = () => {
           <Switch>
             <Route
               component={Typography}
-              path={String(Routes.TYPOGRAPHY)}
+              path={TYPOGRAPHY}
               exact
             />
-            <Route component={ReduxExample} path={String(Routes.REDUX)} exact />
-            <Route component={Pictures} path={String(Routes.PICTURES)} exact />
+            <Route component={ReduxExample} path={REDUX} exact />
+            <Route component={Pictures} path={PICTURES} exact />
             {/*Intentionally left at the bottom*/}
             <Route
               exact
               path={"/"}
               render={() => {
-                return <Redirect to={Routes.TYPOGRAPHY} />;
+                return <Redirect to={TYPOGRAPHY} />;
               }}
             />
           </Switch>
