@@ -59,6 +59,7 @@ export const GlobalStyle = createGlobalStyle<{
     font-style: inherit;
     font-size: 100%;
     font-family: inherit;
+    outline: none;
   }
   h1, h2, h3, h4, h5, h6, p {
     color: ${__COLORS.PRIMARY};

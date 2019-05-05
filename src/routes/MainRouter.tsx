@@ -12,13 +12,14 @@ import NavigationTabs from "./NavigationTabs";
 import { __GRAY_SCALE } from "../layout/Theme";
 import Pictures from "../components/Pictures";
 import { EXTRA_SMALL_DEVICES, LARGE_DEVICES } from "../layout/Mobile";
+import { Routes } from "./Routes";
 
 const Container = styled.div``;
 
-const Routes = styled.div`
+const RoutesContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 2em;
+  margin: 2em 0;
   min-height: 300px;
   border: 1px solid ${__GRAY_SCALE._200};
   border-radius: 5px;
@@ -40,12 +41,15 @@ const MainRouter = () => {
     <Container>
       <Router>
         <NavigationTabs />
-        <Routes>
+        <RoutesContainer>
           <Switch>
-            <Route component={Typography} path={`/typography`} exact />
-            <Route component={ReduxExample} path={`/redux`} exact />
-            <Route component={Pictures} path={`/pictures`} exact />
-
+            <Route
+              component={Typography}
+              path={String(Routes.TYPOGRAPHY)}
+              exact
+            />
+            <Route component={ReduxExample} path={String(Routes.REDUX)} exact />
+            <Route component={Pictures} path={String(Routes.PICTURES)} exact />
             {/*Intentionally left at the bottom*/}
             <Route
               exact
@@ -55,7 +59,7 @@ const MainRouter = () => {
               }}
             />
           </Switch>
-        </Routes>
+        </RoutesContainer>
       </Router>
     </Container>
   );
