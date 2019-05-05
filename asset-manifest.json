@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Lucky-React-Starter/static/js/main.e07a9bcd.chunk.js",
-    "main.js.map": "/Lucky-React-Starter/static/js/main.e07a9bcd.chunk.js.map",
+    "main.js": "/Lucky-React-Starter/static/js/main.20cb76c2.chunk.js",
+    "main.js.map": "/Lucky-React-Starter/static/js/main.20cb76c2.chunk.js.map",
     "runtime~main.js": "/Lucky-React-Starter/static/js/runtime~main.3f554ebe.js",
     "runtime~main.js.map": "/Lucky-React-Starter/static/js/runtime~main.3f554ebe.js.map",
     "static/js/2.f6f0e1ba.chunk.js": "/Lucky-React-Starter/static/js/2.f6f0e1ba.chunk.js",
     "static/js/2.f6f0e1ba.chunk.js.map": "/Lucky-React-Starter/static/js/2.f6f0e1ba.chunk.js.map",
     "index.html": "/Lucky-React-Starter/index.html",
-    "precache-manifest.9e3f7183658527b8a76f26fd0629adbd.js": "/Lucky-React-Starter/precache-manifest.9e3f7183658527b8a76f26fd0629adbd.js",
+    "precache-manifest.76a8cdba05d6c7ab5038c543c136c0e7.js": "/Lucky-React-Starter/precache-manifest.76a8cdba05d6c7ab5038c543c136c0e7.js",
     "service-worker.js": "/Lucky-React-Starter/service-worker.js"
   }
 }
