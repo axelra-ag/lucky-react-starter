@@ -17,6 +17,11 @@
     "jsx": "preserve"
   },
   "compileOnSave": true,
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts", "public", "yarn.lock"]
+  "include": ["src/*"],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "public",
+    "yarn.lock"
+  ]
 }
