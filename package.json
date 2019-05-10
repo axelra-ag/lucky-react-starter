@@ -1,5 +1,5 @@
 {
-  "homepage": "https://lucaspelloni2.github.io/lucky-react-starter",
+  "name": "Lucky React Starter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +12,6 @@
     "@types/react-router-dom": "^4.3.2",
     "@types/styled-components": "^4.1.14",
     "color": "^3.1.1",
-    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "latest",
@@ -28,9 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
