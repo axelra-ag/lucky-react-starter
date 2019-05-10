@@ -36,7 +36,7 @@ const App: React.FC = () => {
   return (
     <Container>
       <Header>
-        <Logo source={"/logo.png"} assetType={AssetType.LOGO} />
+        <Logo source={"logo.png"} assetType={AssetType.LOGO} />
         <AppTitle>Have fun with React :-)</AppTitle>
       </Header>
       <MainRouter />

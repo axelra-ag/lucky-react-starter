@@ -25,7 +25,6 @@ const RoutesContainer = styled.div`
   border-radius: 5px;
   width: 500px;
   padding: 2rem;
-
   ${EXTRA_SMALL_DEVICES`
    width: 260px;
    `};
@@ -51,7 +50,7 @@ const MainRouter = () => {
             {/*Intentionally left at the bottom*/}
             <Route
               exact
-              path={"/"}
+              path={"/*"}
               render={() => {
                 return <Redirect to={TYPOGRAPHY} />;
               }}
