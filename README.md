@@ -13,17 +13,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - gh-pages (for deployment)
 
 ## Deployment
-### DNS Configuration 
-> @ - A - 185.199.108.154 - TTL: 3600
-
-> @ - A - 185.199.109.154 - TTL: 3600
-
-> @ - A - 185.199.110.154 - TTL: 3600
-
-> @ - A - 185.199.111.154 - TTL: 3600
-
-> www - CNAME - lucaspelloni2.github.io - TTL: 43200
-
+This React Template is meant to be deployed to Netlify. 
+Connect your GitHub app with netlify and allow continuous integration. 
+> https://lucky-react-starter.netlify.com
 ## Available Scripts
 
 In the project directory, you can run:
