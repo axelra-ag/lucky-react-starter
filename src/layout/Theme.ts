@@ -68,7 +68,7 @@ export const GlobalStyle = createGlobalStyle<{
   }
   
   h1 {
-   font-size: calc(22.28px + 2vmin);
+   font-size: 22px;
   }
   
   p {

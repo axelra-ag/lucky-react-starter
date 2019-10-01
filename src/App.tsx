@@ -4,6 +4,7 @@ import { __COLORS } from "./layout/Theme";
 import MyImage, { AssetType } from "./views/Figure";
 import MainRouter from "./routes/MainRouter";
 import { BounceIn } from "./layout/UI/Animations/BounceIn";
+
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -28,15 +29,14 @@ const AppTitle = styled.h1`
 const Logo = styled(MyImage)`
   max-width: 100%;
   height: auto;
-  width: 40px;
-  filter: grayscale(1);
+  width: 100px;
 `;
 
 const App: React.FC = () => {
   return (
     <Container>
       <Header>
-        <Logo source={"logo.png"} assetType={AssetType.LOGO} />
+        <Logo source={'https://files.axelra.com/logo.png'} assetType={AssetType.URL} />
         <AppTitle>Have fun with React :-)</AppTitle>
       </Header>
       <MainRouter />

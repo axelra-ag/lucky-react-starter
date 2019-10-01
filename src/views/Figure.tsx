@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 export enum AssetType {
   IMAGE,
-  LOGO
+  LOGO,
+  URL
   // add more attributes here based on the assets folder under /public
 }
 
@@ -19,16 +20,18 @@ type Props = {
 const getPrefix = (assetType: AssetType) => {
   switch (assetType) {
     case AssetType.IMAGE:
-      return "./../assets/images";
+      return "./../assets/images/";
     case AssetType.LOGO:
-      return "./../assets/logos";
+      return "./../assets/logos/";
+    case AssetType.URL:
+      return "";
     default:
-      return "./../assets";
+      return "./../assets/";
   }
 };
 
 const MyImage = ({ source, style, assetType, ...otherProps }: Props) => {
-  let src = `${getPrefix(assetType)}/${source}`;
+  let src = `${getPrefix(assetType)}${source}`;
   return <Img style={style} src={src} {...otherProps} />;
 };
 
