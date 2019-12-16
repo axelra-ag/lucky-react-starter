@@ -20,7 +20,6 @@ const todoReducer = () => {
       case ActionTypes.LOADING_TODOS:
         return { ...state, loading: action.loading };
       case ActionTypes.FETCHED_TODOS:
-        console.log("ajisfjoa");
         return {
           ...state,
           todos: action.todos,
