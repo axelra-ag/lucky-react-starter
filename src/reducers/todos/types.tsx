@@ -1,4 +1,9 @@
-import { Todo } from "../../model/Todo";
+export type Todo = {
+  userId: string;
+  id: number;
+  title: string;
+  completed: boolean;
+}
 
 export enum ActionTypes {
   LOADING_TODOS = "LOADING_TODOS",

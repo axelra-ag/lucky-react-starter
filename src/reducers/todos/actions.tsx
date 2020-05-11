@@ -1,8 +1,8 @@
 import { ThunkDispatch } from "redux-thunk";
-import { ActionTypes, ErrorTodos, FetchedTodos, LoadingTodos } from "./types";
+import {ActionTypes, ErrorTodos, FetchedTodos, LoadingTodos, Todo} from "./types";
 import { getDomain } from "../../helpers/Domain";
 import { HTTP_OPTIONS, PROTOCOL_METHOD } from "../../helpers/FetchOptions";
-import { Todo } from "../../model/Todo";
+
 
 export const fetchTodos = (): any => {
   return async (
