@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import { __COLORS } from "../layout/Theme";
-import MyIcon, { IconTypes } from "../views/Icon";
-import { EXTRA_SMALL_DEVICES } from "../layout/Mobile";
-import { PICTURES, REDUX, TYPOGRAPHY } from "./Routes";
+import {NavLink} from "react-router-dom";
+import {__COLORS} from "../layout/Theme";
+import MyIcon, {IconTypes} from "../views/Icon";
+import {EXTRA_SMALL_DEVICES} from "../layout/Mobile";
+import {PICTURES, REDUX, TYPOGRAPHY} from "./Routes";
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 `;
 
 const IconContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 export const NavigationLink = styled(NavLink)`
   &:hover {
@@ -46,40 +46,43 @@ export const NavigationLink = styled(NavLink)`
 `;
 
 const Title = styled.small`
-  ${EXTRA_SMALL_DEVICES`
+    ${EXTRA_SMALL_DEVICES`
     display: none;
   `};
 `;
 
 NavigationLink.defaultProps = {
-  activeClassName: "active"
+    activeClassName: "active"
 };
 
 const NavigationTabs = () => {
-  return (
-    <Container>
-      <NavigationLink to={TYPOGRAPHY}>
-        <IconContainer>
-          <MyIcon name={IconTypes.TYPOGRAPHY} color={__COLORS.PRIMARY} />
-          <Title>Typography</Title>
-        </IconContainer>
-      </NavigationLink>
+    return (
+        <Container>
+            <NavigationLink to={TYPOGRAPHY}>
+                <IconContainer>
+                    <MyIcon
+                        name={IconTypes.TYPOGRAPHY}
+                        color={__COLORS.PRIMARY}
+                    />
+                    <Title>Typography</Title>
+                </IconContainer>
+            </NavigationLink>
 
-      <NavigationLink to={REDUX}>
-        <IconContainer>
-          <MyIcon name={IconTypes.REDUX} color={__COLORS.PRIMARY} />
-          <Title>Redux</Title>
-        </IconContainer>
-      </NavigationLink>
+            <NavigationLink to={REDUX}>
+                <IconContainer>
+                    <MyIcon name={IconTypes.REDUX} color={__COLORS.PRIMARY} />
+                    <Title>Redux</Title>
+                </IconContainer>
+            </NavigationLink>
 
-      <NavigationLink to={PICTURES}>
-        <IconContainer>
-          <MyIcon name={IconTypes.PICTURE} color={__COLORS.PRIMARY} />
-          <Title>Pictures</Title>
-        </IconContainer>
-      </NavigationLink>
-    </Container>
-  );
+            <NavigationLink to={PICTURES}>
+                <IconContainer>
+                    <MyIcon name={IconTypes.PICTURE} color={__COLORS.PRIMARY} />
+                    <Title>Pictures</Title>
+                </IconContainer>
+            </NavigationLink>
+        </Container>
+    );
 };
 
 export default NavigationTabs;
