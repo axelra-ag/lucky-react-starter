@@ -20,6 +20,9 @@ export enum __COLORS {
     WHITE = "#fff",
     BLACK = "#000"
 }
+
+export const SPACING = 8;
+
 export enum __GRAY_SCALE {
     _WHITE = "#fff",
     _100 = "#f6f9fc",
@@ -65,11 +68,7 @@ export const GlobalStyle = createGlobalStyle<{
     color: ${__COLORS.PRIMARY};
     font-weight: 100;
     line-height: 1.4;
-     font-family: inherit;
-  }
-  
-  h1 {
-   font-size: 22px;
+    font-family: inherit;
   }
   
   p {

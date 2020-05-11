@@ -6,10 +6,10 @@ import {
     Route,
     Redirect
 } from "react-router-dom";
-import Typography from "../components/Typography";
+import {Typography} from "../components/Typography";
 import NavigationTabs from "./NavigationTabs";
 import {__GRAY_SCALE} from "../layout/Theme";
-import Pictures from "../components/Pictures";
+import {Pictures} from "../components/Pictures";
 import {EXTRA_SMALL_DEVICES, LARGE_DEVICES} from "../layout/Mobile";
 import {PICTURES, REDUX, TYPOGRAPHY} from "./Routes";
 import {ReduxExample} from "../components/ReduxExample";
