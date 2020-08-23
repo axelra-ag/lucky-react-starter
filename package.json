@@ -1,17 +1,8 @@
 {
   "name": "lucky-react-starter",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@types/color": "^3.0.1",
-    "@types/jest": "25.2.1",
-    "@types/node": "13.13.5",
-    "@types/react": "16.9.35",
-    "@types/react-dom": "16.9.8",
-    "@types/react-redux": "^7.1.8",
-    "@types/react-router-dom": "^5.1.5",
-    "@types/styled-components": "^5.1.0",
-    "color": "^3.1.2",
     "polished": "^3.6.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -46,15 +37,22 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "25.2.1",
+    "@types/node": "13.13.5",
+    "@types/react": "16.9.35",
+    "@types/react-dom": "16.9.8",
+    "@types/react-redux": "^7.1.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/styled-components": "^5.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-react-app": "^5.2.1",
     "eslint-plugin-10x": "^1.0.6",
     "eslint-plugin-import": "^2.22.0",
-    "prettier": "^2.0.5",
     "eslint-plugin-no-inline-styles": "^1.0.5",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.0"
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "prettier": "^2.0.5"
   }
 }
