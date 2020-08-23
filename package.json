@@ -13,13 +13,18 @@
     "redux-devtools-extension": "latest",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.1.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^3.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && cp _redirects build/_redirects",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test && npm run lint",
+    "eject": "react-scripts eject",
+    "lint": "stylelint \"./src/**/*.{ts, tsx, css}\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -48,8 +53,8 @@
     "@types/node": "13.13.5",
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
-    "@types/react-router": "^5.1.8",
     "@types/react-redux": "^7.1.8",
+    "@types/react-router": "^5.1.8",
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.0",
     "eslint-config-prettier": "^6.11.0",
@@ -61,6 +66,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
