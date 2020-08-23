@@ -1,6 +1,7 @@
+import {fetch} from "reac";
 import {ThunkDispatch} from "redux-thunk";
-import {getDomain} from "../../helpers/Domain";
-import {HTTP_OPTIONS, PROTOCOL_METHOD} from "../../helpers/FetchOptions";
+import {getDomain} from "../../helpers/get-domain";
+import {HTTP_OPTIONS, PROTOCOL_METHOD} from "../../helpers/get-fetch-options";
 import {
   ActionTypes,
   ErrorTodos,

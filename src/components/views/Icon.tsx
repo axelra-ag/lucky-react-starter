@@ -1,19 +1,16 @@
 import React, {CSSProperties} from "react";
 import styled from "styled-components";
-import {getAlphaColor} from "../../helpers/get-alpha-color";
-import {__COLORS} from "../../UI/theme/Theme";
 
-const a = getAlphaColor(0.4, __COLORS.TEXT);
 const Icon = styled.svg<{move: boolean; pointer: boolean; color: string}>`
   &:hover {
-    transform: ${props => (props.move ? "translateY(2px)" : null)};
+    transform: ${(props) => (props.move ? "translateY(2px)" : null)};
   }
   transition: 0.25s all;
-  cursor: ${props => (props.pointer ? "pointer" : "default")};
-  width: ${props => props.width}px;
-  height: ${props => props.height}px;
+  cursor: ${(props) => (props.pointer ? "pointer" : "default")};
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
   vertical-align: middle;
-  fill: ${props => (props.color ? props.color : null)};
+  fill: ${(props) => (props.color ? props.color : null)};
   z-index: 100;
 `;
 const defaultProps = {

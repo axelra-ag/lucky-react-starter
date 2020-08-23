@@ -18,7 +18,7 @@ const todoReducer = () => {
   ) => {
     switch (action.type) {
       case ActionTypes.LOADING_TODOS:
-        return { ...state, loading: action.loading };
+        return {...state, loading: action.loading};
       case ActionTypes.FETCHED_TODOS:
         return {
           ...state,
@@ -26,7 +26,7 @@ const todoReducer = () => {
           loading: action.loading
         };
       case ActionTypes.ERROR_TODOS:
-        return { ...state, error: action.error, loading: action.loading };
+        return {...state, error: action.error, loading: action.loading};
       default:
         return state;
     }

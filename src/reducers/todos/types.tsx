@@ -3,7 +3,7 @@ export type Todo = {
   id: number;
   title: string;
   completed: boolean;
-}
+};
 
 export enum ActionTypes {
   LOADING_TODOS = "LOADING_TODOS",
