@@ -1,6 +1,9 @@
 import React, {CSSProperties} from "react";
 import styled from "styled-components";
+import {getAlphaColor} from "../../helpers/get-alpha-color";
+import {__COLORS} from "../../UI/theme/Theme";
 
+const a = getAlphaColor(0.4, __COLORS.TEXT);
 const Icon = styled.svg<{move: boolean; pointer: boolean; color: string}>`
   &:hover {
     transform: ${props => (props.move ? "translateY(2px)" : null)};

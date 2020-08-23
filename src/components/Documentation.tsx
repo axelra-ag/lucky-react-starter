@@ -1,7 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-
-const Container = styled.div``;
+import {Container} from "../UI/layout/Container";
 
 export const Documentation = () => {
   return <Container>Docs</Container>;

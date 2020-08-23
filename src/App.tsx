@@ -4,8 +4,9 @@ import MainRouter from "./routes/MainRouter";
 
 const Container = styled.div`
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  align-items: baseline;
+  width: 110px;
+  justify-content: center;
 `;
 
 const App: React.FC = () => {

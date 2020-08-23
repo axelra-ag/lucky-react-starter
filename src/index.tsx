@@ -4,7 +4,7 @@ import {Provider} from "react-redux";
 import {ThemeProvider} from "styled-components";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import {GlobalStyle, MainTheme} from "./UI/layout/Theme";
+import {GlobalStyle, MainTheme} from "./UI/theme/Theme";
 import store from "./reducers/store";
 
 // Entry Point of your App
