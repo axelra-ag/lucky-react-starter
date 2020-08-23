@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
+import React, {Fragment} from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
+import {Provider} from "react-redux";
+import {ThemeProvider} from "styled-components";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { ThemeProvider } from "styled-components";
-import { GlobalStyle, MainTheme } from "./layout/Theme";
+import {GlobalStyle, MainTheme} from "./UI/layout/Theme";
 import store from "./reducers/store";
 
 // Entry Point of your App
