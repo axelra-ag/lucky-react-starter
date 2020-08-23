@@ -4,21 +4,19 @@ import {createGlobalStyle, ThemeProviderProps} from "styled-components";
 type Props = {
   googleUrl: string;
 };
+
 export const MainTheme: CSSProperties & Props = {
   fontFamily: "Gothic A1, sans-serif",
-  googleUrl: "https://fonts.googleapis.com/css?family=Gothic+A1:200,400,700",
-  boxShadow: "0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08)"
-  // add more general CSS properties here
+  googleUrl: "https://fonts.googleapis.com/css?family=Gothic+A1:200,400,700"
 };
 
 // Colors Palette https://colorhunt.co/
 export enum __COLORS {
-  PRIMARY = "#f38181",
-  SECONDARY = "#fce38a",
-  TERTRIARY = "#eaffd0",
-  FOURTH = "#95e1d3",
-  WHITE = "#fff",
-  BLACK = "#000"
+  CTA = "#e94560",
+  TEXT = "#16213e",
+  PRIMARY = "#0f3460",
+  BLACK = "#000",
+  WHITE = "#fff"
 }
 
 export const SPACING = 8;
@@ -71,6 +69,7 @@ export const GlobalStyle = createGlobalStyle<{
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
+    color: ${__COLORS.TEXT};
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
