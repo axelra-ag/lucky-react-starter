@@ -1,4 +1,4 @@
-import React, { CSSProperties, ImgHTMLAttributes } from "react";
+import React, {CSSProperties, ImgHTMLAttributes} from "react";
 import styled from "styled-components";
 
 export enum AssetType {
@@ -30,8 +30,8 @@ const getPrefix = (assetType: AssetType) => {
   }
 };
 
-const MyImage = ({ source, style, assetType, ...otherProps }: Props) => {
-  let src = `${getPrefix(assetType)}${source}`;
+const MyImage = ({source, style, assetType, ...otherProps}: Props) => {
+  const src = `${getPrefix(assetType)}${source}`;
   return <Img style={style} src={src} {...otherProps} />;
 };
 
