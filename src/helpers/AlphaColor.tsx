@@ -1,5 +1,5 @@
 import Color from "color";
-import { __ALERTS, __COLORS, __GRAY_SCALE } from "../layout/Theme";
+import {__ALERTS, __COLORS, __GRAY_SCALE} from "../UI/layout/Theme";
 
 export const getAlphaColor = (
   alpha: number,
