@@ -1,8 +1,13 @@
-import { ThunkDispatch } from "redux-thunk";
-import {ActionTypes, ErrorTodos, FetchedTodos, LoadingTodos, Todo} from "./types";
-import { getDomain } from "../../helpers/Domain";
-import { HTTP_OPTIONS, PROTOCOL_METHOD } from "../../helpers/FetchOptions";
-
+import {ThunkDispatch} from "redux-thunk";
+import {getDomain} from "../../helpers/Domain";
+import {HTTP_OPTIONS, PROTOCOL_METHOD} from "../../helpers/FetchOptions";
+import {
+  ActionTypes,
+  ErrorTodos,
+  FetchedTodos,
+  LoadingTodos,
+  Todo
+} from "./types";
 
 export const fetchTodos = (): any => {
   return async (
@@ -13,8 +18,6 @@ export const fetchTodos = (): any => {
       loading: true
     });
 
-    //dummy promise
-    await new Promise(resolve => setTimeout(resolve, 2000));
     fetch(`${getDomain()}/todos`, HTTP_OPTIONS(PROTOCOL_METHOD.GET))
       .then(res => res.json())
       .then((todos: Todo[]) => {
@@ -25,7 +28,6 @@ export const fetchTodos = (): any => {
         });
       })
       .catch((error: string) => {
-        console.log(error);
         dispatch({
           type: ActionTypes.ERROR_TODOS,
           error,
