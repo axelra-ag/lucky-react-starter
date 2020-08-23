@@ -46,6 +46,15 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-react-app": "^5.2.1"
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-10x": "^1.0.6",
+    "eslint-plugin-import": "^2.22.0",
+    "prettier": "^2.0.5",
+    "eslint-plugin-no-inline-styles": "^1.0.5",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0"
   }
 }
