@@ -10855,7 +10855,7 @@ stylelint-processor-styled-components@^1.10.0:
     micromatch "^4.0.2"
     postcss "^7.0.26"
 
-stylelint@^13.6.1:
+stylelint@13.7.0:
   version "13.7.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-13.7.0.tgz#8d7a4233063b2f06e9f28b3405ff189e334547b5"
   integrity sha512-1wStd4zVetnlHO98VjcHQbjSDmvcA39smkZQMct2cf+hom40H0xlQNdzzbswoG/jGBh61/Ue9m7Lu99PY51O6A==
