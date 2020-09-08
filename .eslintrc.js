@@ -16,7 +16,8 @@ module.exports = {
     "@typescript-eslint/eslint-plugin",
     "10x",
     "prettier",
-    "react-hooks"
+    "react-hooks",
+    "eslint-plugin-no-inline-styles"
   ],
   extends: [
     "plugin:@typescript-eslint/recommended",
@@ -34,6 +35,7 @@ module.exports = {
   },
   rules: {
     indent: "off",
+    "no-inline-styles/no-inline-styles": 2,
     "comma-dangle": ["error", "never"],
     "for-direction": "error",
     "getter-return": "error",

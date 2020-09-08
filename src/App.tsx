@@ -11,7 +11,7 @@ const Container = styled.div`
 
 const App: React.FC = () => {
   return (
-    <Container>
+    <Container style={{height: 40}}>
       <MainRouter />
     </Container>
   );
