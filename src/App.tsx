@@ -4,7 +4,6 @@ import MainRouter from "./routes/MainRouter";
 
 const Container = styled.div`
   display: flex;
-  align-items: baseline;
   width: 110px;
   justify-content: center;
 `;

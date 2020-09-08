@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import {
   BrowserRouter as Router,
   Redirect,
@@ -7,29 +6,22 @@ import {
   Switch
 } from "react-router-dom";
 import {Documentation} from "../components/Documentation";
+import {Container} from "../UI/layout/Container";
 import {DOCUMENTATION} from "./Routes";
-
-const Container = styled.div``;
-
-const RoutesContainer = styled.div``;
 
 const MainRouter = () => {
   return (
     <Container>
       <Router>
-        <RoutesContainer>
-          <Switch>
-            <Route component={Documentation} path={DOCUMENTATION} exact />
-            {/*Intentionally left at the bottom*/}
-            <Route
-              exact
-              path={"/*"}
-              render={() => {
-                return <Redirect to={DOCUMENTATION} />;
-              }}
-            />
-          </Switch>
-        </RoutesContainer>
+        <Switch>
+          <Route component={Documentation} path={DOCUMENTATION} exact />
+          {/*Intentionally left at the bottom*/}
+          <Route
+            exact
+            path={"/*"}
+            render={() => <Redirect to={DOCUMENTATION} />}
+          />
+        </Switch>
       </Router>
     </Container>
   );

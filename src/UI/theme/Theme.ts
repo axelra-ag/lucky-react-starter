@@ -19,6 +19,7 @@ export enum __COLORS {
   WHITE = "#fff"
 }
 
+// SPACING variable to be used for margins, paddings, etc.
 export const SPACING = 8;
 
 export enum __GRAY_SCALE {
@@ -91,8 +92,7 @@ export const GlobalStyle = createGlobalStyle<{
   
   blockquote:before, blockquote:after,
   q:before, q:after {
-    content: '';
-    content: none;
+    content: " ";
   }
   table {
     border-collapse: collapse;
