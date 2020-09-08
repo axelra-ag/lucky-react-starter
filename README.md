@@ -1,16 +1,25 @@
-# Lucky React Starter
+# Axelra Lucky React Starter
 
-## Welcome :)
+
+## Setup 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## External Dependencies (in addition to create-react-app's default)
+### External Dependencies (in addition to create-react-app's default)
 
 - Styled Components
 - Colors
 - React Router
 - Redux and Redux Thunk and Redux Middleware extension
 - gh-pages (for deployment)
+
+### Environment Variables
+Create a file called `.env` in the root folder. You can specify there two types of variables: 
+
+```
+REACT_APP_API_ENDPOINT = api_end_point
+REACT_APP_ENV = development | production | staging | whatever
+```
 
 ## Deployment
 This React Template is meant to be deployed to Netlify. 
