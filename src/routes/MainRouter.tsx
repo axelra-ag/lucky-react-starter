@@ -5,8 +5,8 @@ import {
   Route,
   Switch
 } from "react-router-dom";
-import {Documentation} from "../components/Documentation";
-import {Container} from "../UI/layout/Container";
+import {Documentation} from "../components/docs/Documentation";
+import {Container} from "../UI/layout/container/Container";
 import {DOCUMENTATION} from "./Routes";
 
 const MainRouter = () => {
