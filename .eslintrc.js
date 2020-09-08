@@ -636,6 +636,7 @@ module.exports = {
           styled: "import styled from 'styled-components'",
           sortBy: "import sortBy from 'lodash/sortBy'",
           groupBy: "import groupBy from 'lodash/groupBy'",
+          isEmpty: "import isEmpty from 'lodash/isEmpty'",
           lighten: "import {lighten} from 'polished'",
           getWeeksInMonth: "import {getWeeksInMonth} from 'date-fns'",
           startOfMonth: "import {startOfMonth} from 'date-fns'",
