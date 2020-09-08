@@ -20,7 +20,7 @@ export const fetchTodos = (): any => {
     });
 
     fetch(`${getDomain()}/todos`, HTTP_OPTIONS(PROTOCOL_METHOD.GET))
-      .then(res => res.json())
+      .then((res) => res.json())
       .then((todos: Todo[]) => {
         dispatch({
           type: ActionTypes.FETCHED_TODOS,
