@@ -1,5 +1,14 @@
 import {ThunkDispatch} from "redux-thunk";
-import {ActionTypes, ErrorTodos, FetchedTodos, LoadingTodos} from "./types";
+import {fetch as fetchPolyfill} from "whatwg-fetch";
+import {getDomain} from "../../helpers/get-domain";
+import {HTTP_OPTIONS, PROTOCOL_METHOD} from "../../helpers/get-fetch-options";
+import {
+  ActionTypes,
+  ErrorTodos,
+  FetchedTodos,
+  LoadingTodos,
+  Todo
+} from "./types";
 
 export const fetchTodos = (): any => {
   return async (
@@ -10,7 +19,7 @@ export const fetchTodos = (): any => {
       loading: true
     });
 
-    /* fetch(`${getDomain()}/todos`, HTTP_OPTIONS(PROTOCOL_METHOD.GET))
+    fetchPolyfill(`${getDomain()}/todos`, HTTP_OPTIONS(PROTOCOL_METHOD.GET))
       .then(res => res.json())
       .then((todos: Todo[]) => {
         dispatch({
@@ -25,6 +34,6 @@ export const fetchTodos = (): any => {
           error,
           loading: false
         });
-      });*/
+      });
   };
 };

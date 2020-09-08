@@ -11,21 +11,16 @@
   },
   "browserslist": {
     "production": [
-      "last 1 major version",
-      ">= 1%",
-      "Chrome >= 45",
-      "Firefox >= 38",
-      "Edge >= 12",
-      "Explorer >= 10",
-      "iOS >= 9",
-      "Safari >= 9",
-      "Android >= 4.4",
-      "Opera >= 30"
+      "edge >= 12",
+      "ff >= 60",
+      "chrome >= 44",
+      "safari >= 10"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "edge >= 12",
+      "ff >= 60",
+      "chrome >= 44",
+      "safari >= 10"
     ]
   },
   "eslintConfig": {
@@ -68,6 +63,7 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-no-unsupported-browser-features": "^4.0.0",
     "stylelint-processor-styled-components": "^1.10.0",
     "ts-unused-exports": "^6.2.3",
     "typescript": "^3.8.3",

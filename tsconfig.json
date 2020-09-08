@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es3",
     "lib": ["dom", "dom.iterable", "esnext", "es5", "es6", "es7"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -14,14 +14,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "typeRoots": [
+      "./types", "./node_modules/@types"]
   },
   "compileOnSave": true,
   "include": ["src/*"],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts",
-    "public",
-    "yarn.lock"
-  ]
+  "exclude": ["node_modules", "**/*.spec.ts", "public", "yarn.lock"]
 }
