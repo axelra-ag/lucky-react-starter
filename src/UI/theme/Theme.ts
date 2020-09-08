@@ -55,6 +55,8 @@ export const GlobalStyle = createGlobalStyle<{
   }
   body {
     margin: 0;
+    font-weight: 500;
+    line-height: 1;
   }
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -69,8 +71,6 @@ export const GlobalStyle = createGlobalStyle<{
   figure, figcaption, footer, header, hgroup, 
   menu, nav, output, ruby, section, summary,
   time, mark, audio, video {
-    font-size: 100%;
-    vertical-align: baseline;
     color: ${__COLORS.TEXT};
   }
   /* HTML5 display-role reset for older browsers */

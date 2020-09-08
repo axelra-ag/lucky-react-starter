@@ -15,13 +15,14 @@ export const Documentation = () => {
   return (
     <MyContainer>
       <Row>
-        <Flex flex={2} row>
-          <Column>First Column</Column>
-        </Flex>
-        <Flex flex={1} column>
-          <Column>Second Column</Column>
-          <Column>Third Column</Column>
-        </Flex>
+        <Column>
+          <Flex row flex={1} align="center">
+            <Flex flex={1}>skofajosfjoa</Flex>
+            <Flex flex={1}>kookko</Flex>
+          </Flex>
+        </Column>
+        <Column>Second Column</Column>
+        <Column>Third Column</Column>
       </Row>
     </MyContainer>
   );
