@@ -30,6 +30,6 @@
     "string-no-newline": true,
     "unit-no-unknown": true,
     "block-no-empty": null,
-    "unit-whitelist": ["px", "%", "s"]
+    "unit-allowed-list": ["px", "%", "s"]
   }
 }
