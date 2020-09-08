@@ -16,9 +16,11 @@ export const Documentation = () => {
     <MyContainer>
       <Row>
         <Column>
-          <Flex row flex={1} align="center">
+          <Flex row flex={1}>
             <Flex flex={1}>skofajosfjoa</Flex>
-            <Flex flex={1}>kookko</Flex>
+            <Flex row flex={2} justify="flex-end">
+              kookko
+            </Flex>
           </Flex>
         </Column>
         <Column>Second Column</Column>
