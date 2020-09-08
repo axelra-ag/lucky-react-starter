@@ -7,7 +7,6 @@ import {
   MEDIUM_DEVICES_BREAK_POINT,
   SMALL_DEVICES_BREAK_POINT
 } from "../media-query/Mobile";
-import {SPACING} from "../../theme/Theme";
 
 // with props use this:
 // ${props => mediaQueries("md")(`width: ${props.width}px`)}
@@ -32,8 +31,6 @@ const media = css`
 export const Container = styled.div`
   ${media};
   width: 100%;
-  padding-right: ${SPACING}px;
-  padding-left: ${SPACING}px;
   margin-right: auto;
   margin-left: auto;
 `;

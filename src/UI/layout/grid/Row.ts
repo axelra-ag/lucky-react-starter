@@ -5,6 +5,4 @@ export const Row = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: -${SPACING}px;
-  margin-right: -${SPACING}px;
 `;
