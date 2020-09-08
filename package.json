@@ -7,7 +7,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint --cache 'src/**/*.{ts,tsx,jsx}' && stylelint '**/**.tsx' && tsc && ts-unused-exports tsconfig.json",
     "start": "react-scripts start",
-    "test": "npm run lint"
+    "test": "react-scripts test && npm run lint"
   },
   "browserslist": {
     "production": [
