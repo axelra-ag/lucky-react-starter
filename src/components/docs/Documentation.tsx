@@ -1,24 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import {Container} from "../../UI/layout/container/Container";
-import {__COLORS, SPACING} from "../../UI/theme/Theme";
-import {Icon, IconTypes} from "../views/Icon";
+import {Container} from "../../UI/layout/grid/Container";
+import {Col} from "../../UI/layout/grid/Col";
+import {Row} from "../../UI/layout/grid/Row";
+import {SPACING} from "../../UI/theme/Theme";
+import {Flex} from "../../UI/layout/grid/Flex";
 
-const MyIcon = styled(Icon)``;
-
-const Row = styled(Container)`
-  background: red;
-  min-height: 400px;
+const Root = styled(Container)`
+  background: aqua;
 `;
+
+const Column = styled(Col)``;
 
 export const Documentation = () => {
   return (
-    <Row>
-      <MyIcon
-        name={IconTypes.PICTURE}
-        color={__COLORS.CTA}
-        size={SPACING * 3}
-      />
-    </Row>
+    <Root>
+      <Row>
+        <Flex flex={2} row>
+          <Column>First Column</Column>
+        </Flex>
+        <Flex flex={1} row>
+          <Column>Second Column</Column>
+          <Column>Third Column</Column>
+        </Flex>
+      </Row>
+    </Root>
   );
 };
