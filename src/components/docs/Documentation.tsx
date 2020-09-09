@@ -4,9 +4,11 @@ import {Container} from "../../UI/layout/grid/Container";
 import {Col} from "../../UI/layout/grid/Col";
 import {Row} from "../../UI/layout/grid/Row";
 import {Flex} from "../../UI/layout/grid/Flex";
+import {__GRAY_SCALE, SPACING} from "../../UI/theme/Theme";
+import {HowItWorks} from "./sections/HowItWorks";
 
 const MyContainer = styled(Container)`
-  background: aqua;
+  margin-top: ${SPACING * 2}px;
 `;
 
 const Column = styled(Col)``;
@@ -15,6 +17,11 @@ export const Documentation = () => {
   return (
     <MyContainer>
       <Row>
+        <Column>
+          <HowItWorks />
+        </Column>
+      </Row>
+      {/*<Row>
         <Column>
           <Flex row flex={1}>
             <Flex flex={1}>skofajosfjoa</Flex>
@@ -25,7 +32,7 @@ export const Documentation = () => {
         </Column>
         <Column>Second Column</Column>
         <Column>Third Column</Column>
-      </Row>
+      </Row>*/}
     </MyContainer>
   );
 };

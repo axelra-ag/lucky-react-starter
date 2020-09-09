@@ -6,24 +6,21 @@ import {
   Switch
 } from "react-router-dom";
 import {Documentation} from "../components/docs/Documentation";
-import {Container} from "../UI/layout/grid/Container";
 import {DOCUMENTATION} from "./Routes";
 
 const MainRouter = () => {
   return (
-    <Container>
-      <Router>
-        <Switch>
-          <Route component={Documentation} path={DOCUMENTATION} exact />
-          {/*Intentionally left at the bottom*/}
-          <Route
-            exact
-            path={"/*"}
-            render={() => <Redirect to={DOCUMENTATION} />}
-          />
-        </Switch>
-      </Router>
-    </Container>
+    <Router>
+      <Switch>
+        <Route component={Documentation} path={DOCUMENTATION} exact />
+        {/*Intentionally left at the bottom*/}
+        <Route
+          exact
+          path={"/*"}
+          render={() => <Redirect to={DOCUMENTATION} />}
+        />
+      </Switch>
+    </Router>
   );
 };
 

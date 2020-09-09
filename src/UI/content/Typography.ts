@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components";
+import {SPACING} from "../theme/Theme";
 
 /**
  * -------------- Headings --------------
@@ -6,6 +7,7 @@ import styled, {css} from "styled-components";
 const HeadingRoot = css`
   font-weight: 500;
   line-height: 1.2;
+  margin: ${SPACING}px 0;
 `;
 
 export const H1 = styled.span`
@@ -60,4 +62,17 @@ export const Display3 = styled.span`
 export const Display4 = styled.span`
   ${DisplayRoot};
   font-size: 56px;
+`;
+
+/**
+ * -------------- Paragraphs --------------
+ */
+const ParagraphRoot = css`
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: ${SPACING * 2}px;
+`;
+export const P = styled.p`
+  ${ParagraphRoot};
 `;

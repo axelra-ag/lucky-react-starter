@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import {SPACING} from "../../theme/Theme";
+import {GUTTER} from "../../theme/Theme";
 
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: -${SPACING}px;
-  margin-right: -${SPACING}px;
+  width: 100%;
+  margin-left: -${GUTTER}px;
+  margin-right: -${GUTTER}px;
 `;

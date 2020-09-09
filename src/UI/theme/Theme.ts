@@ -20,8 +20,8 @@ export enum __COLORS {
   WHITE = "#fff"
 }
 
-// SPACING variable to be used for margins, paddings, etc.
-export const SPACING = 15;
+export const GUTTER = 15;
+export const SPACING = 8;
 
 export enum __GRAY_SCALE {
   _WHITE = "#fff",
@@ -60,6 +60,9 @@ export const GlobalStyle = createGlobalStyle<{
   html,body {
     margin: 0;
     padding: 0;
+  }
+  body {
+    line-height: 1.5;
   }
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
