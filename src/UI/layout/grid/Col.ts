@@ -38,6 +38,14 @@ const getMediaQuery = (
   const breakPoint = getBreakPoint(sm, md, lg, xl);
   if (!breakPoint) return null;
   if (!sm && !md && !lg && !xl) return null;
+  if (
+    typeof sm === "boolean" ||
+    typeof md === "boolean" ||
+    typeof lg === "boolean" ||
+    typeof xl === "boolean"
+  ) {
+    return makeQuery(breakPoint)(SimpleCol);
+  }
   return makeQuery(breakPoint)(`
       flex: 0 0 ${getFlex((sm ? sm : md ? md : lg ? lg : xl) as ColAttribute)}; 
       max-width: ${getMaxWidth(

@@ -71,7 +71,6 @@ export const HowItWorks = () => {
             </Row>
           </Container>
         </SectionLayout>
-        ---------------------
         <SectionLayout>
           <Container>
             <Row justify="center">
@@ -82,6 +81,19 @@ export const HowItWorks = () => {
               <Column lg={2} col>
                 3 of 3
               </Column>
+            </Row>
+          </Container>
+        </SectionLayout>
+        <SectionLayout>
+          <Container>
+            <Row>
+              <Column sm={8}>sm=8</Column>
+              <Column sm={4}>sm=4</Column>
+            </Row>
+            <Row>
+              <Column sm>sm=true</Column>
+              <Column sm>sm=true</Column>
+              <Column sm>sm=true</Column>
             </Row>
           </Container>
         </SectionLayout>
