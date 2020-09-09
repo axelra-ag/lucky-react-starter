@@ -24,6 +24,11 @@ const getDimension = (n: number) => {
 const getFlex = (t: ColAttribute) =>
   Number.isInteger(t) ? `${getDimension(t as number)}%` : "auto";
 
+const getMaxWidth = (t: ColAttribute) =>
+  Number.isInteger(t) ? `${getDimension(t as number)}%` : "100%";
+
+const getWidth = (t: ColAttribute) => (Number.isInteger(t) ? `100%` : "auto");
+
 const getMediaQuery = (
   sm?: ColAttribute,
   md?: ColAttribute,
@@ -35,11 +40,17 @@ const getMediaQuery = (
   if (!sm && !md && !lg && !xl) return null;
   return makeQuery(breakPoint)(`
       flex: 0 0 ${getFlex((sm ? sm : md ? md : lg ? lg : xl) as ColAttribute)}; 
-      max-width: ${getFlex(
+      max-width: ${getMaxWidth(
         (sm ? sm : md ? md : lg ? lg : xl) as ColAttribute
-      )}; 
+      )};
+      width: ${getWidth((sm ? sm : md ? md : lg ? lg : xl) as ColAttribute)};  
   `);
 };
+
+const getDefaultColCSS = (col: number) => css`
+  flex: 0 0 ${getDimension(col)}%;
+  max-width: ${getDimension(col)}%;
+`;
 
 const ColRoot = css`
   position: relative;
@@ -53,20 +64,19 @@ const SimpleCol = css`
   min-width: 0;
   max-width: 100%;
 `;
-
-const getDefaultColCSS = (col: number) => css`
-  flex: 0 0 ${getDimension(col)}%;
-  max-width: ${getDimension(col)}%;
-`;
-
 export const Col = styled.div<{
   sm?: ColAttribute;
   md?: ColAttribute;
   lg?: ColAttribute;
   xl?: ColAttribute;
-  col?: number;
+  col?: number | boolean;
 }>`
   ${({sm, md, lg, xl}) => getMediaQuery(sm, md, lg, xl) || SimpleCol};
-  ${({col}) => (col ? getDefaultColCSS(col) : "")}
+  ${({col}) =>
+    col
+      ? Number.isInteger(col)
+        ? getDefaultColCSS(col as number)
+        : SimpleCol
+      : ""}
   ${ColRoot};
 `;

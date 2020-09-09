@@ -4,7 +4,7 @@ import {Flex} from "../../../UI/layout/grid/Flex";
 import {Container} from "../../../UI/layout/grid/Container";
 import {Row} from "../../../UI/layout/grid/Row";
 import {Col} from "../../../UI/layout/grid/Col";
-import {__COLORS, GUTTER} from "../../../UI/theme/Theme";
+import {__COLORS, __GRAY_SCALE, GUTTER} from "../../../UI/theme/Theme";
 import {getAlphaColor} from "../../../helpers/get-alpha-color";
 import {Spacer} from "../../../UI/layout/spacer/Spacer";
 import {
@@ -16,8 +16,8 @@ import {
 
 const Column = styled(Col)`
   padding: ${GUTTER}px;
-  background: ${getAlphaColor(0.1, __COLORS.CTA)};
-  border: 1px solid ${__COLORS.CTA};
+  background: ${getAlphaColor(0.1, __GRAY_SCALE._700)};
+  border: 1px solid ${__GRAY_SCALE._400};
 `;
 export const HowItWorks = () => {
   return (
@@ -63,6 +63,24 @@ export const HowItWorks = () => {
             <Row>
               <Column>1 of 3</Column>
               <Column col={6}>2 of 3 (wider)</Column>
+              <Column>3 of 3</Column>
+            </Row>
+            <Spacer x1 />
+            <Row>
+              <Column>1 of 3</Column>
+              <Column col={5}>2 of 3 (wider)</Column>
+              <Column>3 of 3</Column>
+            </Row>
+          </Container>
+        </SectionLayout>
+        ---------------------
+        <SectionLayout>
+          <Container>
+            <Row justify="center">
+              <Column lg={2}>1 of 3</Column>
+              <Column col md="auto">
+                Variable width content
+              </Column>
               <Column>3 of 3</Column>
             </Row>
           </Container>
