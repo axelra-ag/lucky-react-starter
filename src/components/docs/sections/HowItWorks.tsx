@@ -4,7 +4,7 @@ import {Flex} from "../../../UI/layout/grid/Flex";
 import {Container} from "../../../UI/layout/grid/Container";
 import {Row} from "../../../UI/layout/grid/Row";
 import {Col} from "../../../UI/layout/grid/Col";
-import {__COLORS, GUTTER, SPACING} from "../../../UI/theme/Theme";
+import {__COLORS, GUTTER} from "../../../UI/theme/Theme";
 import {getAlphaColor} from "../../../helpers/get-alpha-color";
 import {Spacer} from "../../../UI/layout/spacer/Spacer";
 import {
@@ -44,11 +44,13 @@ export const HowItWorks = () => {
               <Column sm={6}>3 of 3</Column>
             </Row>
           </Container>
+          <Spacer x1 />
           <Container>
             <Row>
               <Column md={8}>md=8</Column>
             </Row>
           </Container>
+          <Spacer x1 />
           <Container>
             <Row>
               <Column md={8}>1 of 3</Column>
@@ -56,6 +58,7 @@ export const HowItWorks = () => {
               <Column>3 of 3</Column>
             </Row>
           </Container>
+          <Spacer x1 />
           <Container>
             <Row>
               <Column>1 of 3</Column>
