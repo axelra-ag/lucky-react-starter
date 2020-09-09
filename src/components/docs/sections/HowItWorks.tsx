@@ -87,13 +87,45 @@ export const HowItWorks = () => {
         <SectionLayout>
           <Container>
             <Row>
-              <Column sm={8}>sm=8</Column>
-              <Column sm={4}>sm=4</Column>
+              <Column sm={8} order={1}>
+                sm=8
+              </Column>
+              <Column sm={4} order={2}>
+                sm=4
+              </Column>
             </Row>
             <Row>
               <Column sm>sm=true</Column>
               <Column sm>sm=true</Column>
               <Column sm>sm=true</Column>
+            </Row>
+          </Container>
+        </SectionLayout>
+        <SectionLayout>
+          <Container>
+            <Row>
+              <Column col={12} md={8}>
+                xs=12 md=8
+              </Column>
+              <Column col={6} md={4}>
+                xs=6 md=4
+              </Column>
+            </Row>
+            <Spacer x1 />
+            <Row>
+              <Column col={6} md={4}>
+                xs=6 md=4
+              </Column>
+              <Column col={6} md={4}>
+                xs=6 md=4
+              </Column>
+              <Column col={6} md={4}>
+                xs=6 md=4
+              </Column>
+            </Row>
+            <Row>
+              <Column col={6}>xs=6 </Column>
+              <Column col={6}>xs=6 </Column>
             </Row>
           </Container>
         </SectionLayout>

@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 import {GUTTER} from "../../theme/Theme";
 import {__MEDIA_QUERY_BREAK_POINT, makeQuery} from "../media-query/Mobile";
+import {Flex} from "./Flex";
 
 type ColAttribute = number | boolean | "auto";
 
@@ -78,6 +79,7 @@ export const Col = styled.div<{
   lg?: ColAttribute;
   xl?: ColAttribute;
   col?: number | boolean;
+  order?: number;
 }>`
   ${({sm, md, lg, xl}) => getMediaQuery(sm, md, lg, xl) || SimpleCol};
   ${({col}) =>
@@ -85,6 +87,10 @@ export const Col = styled.div<{
       ? Number.isInteger(col)
         ? getDefaultColCSS(col as number)
         : SimpleCol
-      : ""}
+      : ""};
+  ${({order}) =>
+    order &&
+    `order: ${order};
+  `}
   ${ColRoot};
 `;
