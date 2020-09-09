@@ -54,12 +54,19 @@ const SimpleCol = css`
   max-width: 100%;
 `;
 
+const getDefaultColCSS = (col: number) => css`
+  flex: 0 0 ${getDimension(col)}%;
+  max-width: ${getDimension(col)}%;
+`;
+
 export const Col = styled.div<{
   sm?: ColAttribute;
   md?: ColAttribute;
   lg?: ColAttribute;
   xl?: ColAttribute;
+  col?: number;
 }>`
   ${({sm, md, lg, xl}) => getMediaQuery(sm, md, lg, xl) || SimpleCol};
+  ${({col}) => (col ? getDefaultColCSS(col) : "")}
   ${ColRoot};
 `;

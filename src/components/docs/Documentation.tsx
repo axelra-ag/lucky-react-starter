@@ -4,6 +4,7 @@ import {Container} from "../../UI/layout/grid/Container";
 import {Col} from "../../UI/layout/grid/Col";
 import {Row} from "../../UI/layout/grid/Row";
 import {SPACING} from "../../UI/theme/Theme";
+import {Spacer} from "../../UI/layout/spacer/Spacer";
 import {HowItWorks} from "./sections/HowItWorks";
 
 const MyContainer = styled(Container)`
@@ -20,6 +21,7 @@ export const Documentation = () => {
           <HowItWorks />
         </Column>
       </Row>
+      <Spacer x10 />
     </MyContainer>
   );
 };

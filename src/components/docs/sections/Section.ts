@@ -8,7 +8,6 @@ export const SectionTitle = styled(H1)``;
 export const SectionParagraph = styled(P)``;
 
 export const SectionBox = styled(Flex)`
-  min-height: 150px;
   border: 2px solid ${__GRAY_SCALE._200};
   width: 100%;
 `;

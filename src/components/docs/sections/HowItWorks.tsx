@@ -9,7 +9,6 @@ import {getAlphaColor} from "../../../helpers/get-alpha-color";
 import {Spacer} from "../../../UI/layout/spacer/Spacer";
 import {
   SectionBox,
-  SectionCode,
   SectionLayout,
   SectionParagraph,
   SectionTitle
@@ -39,27 +38,19 @@ export const HowItWorks = () => {
         <SectionLayout>
           <Container>
             <Row>
-              <Column sm={4}>1 of 3</Column>
-              <Column sm={2}>2 of 3</Column>
-              <Column sm={6}>3 of 3</Column>
+              <Column>One of three columns</Column>
+              <Column>One of three columns</Column>
+              <Column>One of three columns</Column>
             </Row>
           </Container>
-          <Spacer x1 />
+        </SectionLayout>
+        <SectionLayout>
           <Container>
             <Row>
-              <Column md={8}>md=8</Column>
+              <Column>1 of 2</Column>
+              <Column>2 of 2</Column>
             </Row>
-          </Container>
-          <Spacer x1 />
-          <Container>
-            <Row>
-              <Column md={8}>1 of 3</Column>
-              <Column>2 of 3</Column>
-              <Column>3 of 3</Column>
-            </Row>
-          </Container>
-          <Spacer x1 />
-          <Container>
+            <Spacer x1 />
             <Row>
               <Column>1 of 3</Column>
               <Column>2 of 3</Column>
@@ -67,9 +58,15 @@ export const HowItWorks = () => {
             </Row>
           </Container>
         </SectionLayout>
-        <SectionCode flex={1}>
-          <code>{"afajosfoasjf\nasfasfj"}</code>
-        </SectionCode>
+        <SectionLayout>
+          <Container>
+            <Row>
+              <Column>1 of 3</Column>
+              <Column col={6}>2 of 3 (wider)</Column>
+              <Column>3 of 3</Column>
+            </Row>
+          </Container>
+        </SectionLayout>
       </SectionBox>
     </Flex>
   );
