@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {GUTTER} from "../../theme/Theme";
 import {__MEDIA_QUERY_BREAK_POINT, makeQuery} from "../media-query/Mobile";
 
@@ -29,10 +29,10 @@ const getMediaQuery = (
   md?: ColAttribute,
   lg?: ColAttribute,
   xl?: ColAttribute
-): string => {
+): string | null => {
   const breakPoint = getBreakPoint(sm, md, lg, xl);
-  if (!breakPoint) return "";
-  if (!sm && !md && !lg && !xl) return "";
+  if (!breakPoint) return null;
+  if (!sm && !md && !lg && !xl) return null;
   return makeQuery(breakPoint)(`
       flex: 0 0 ${getFlex((sm ? sm : md ? md : lg ? lg : xl) as ColAttribute)}; 
       max-width: ${getFlex(
@@ -41,13 +41,20 @@ const getMediaQuery = (
   `);
 };
 
+const SimpleCol = css`
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 100%;
+`;
+
 export const Col = styled.div<{
   sm?: ColAttribute;
   md?: ColAttribute;
   lg?: ColAttribute;
   xl?: ColAttribute;
 }>`
-  ${({sm, md, lg, xl}) => getMediaQuery(sm, md, lg, xl)};
+  ${({sm, md, lg, xl}) => getMediaQuery(sm, md, lg, xl) || SimpleCol};
   position: relative;
   padding: 0 ${GUTTER}px;
   width: 100%;
