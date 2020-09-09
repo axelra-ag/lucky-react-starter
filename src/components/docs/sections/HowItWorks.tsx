@@ -61,9 +61,7 @@ export const HowItWorks = () => {
         <SectionLayout>
           <Container>
             <Row>
-              <Column>1 of 3</Column>
-              <Column col={6}>2 of 3 (wider)</Column>
-              <Column>3 of 3</Column>
+              <Column lg={6}>1 of 3</Column>
             </Row>
             <Spacer x1 />
             <Row>
@@ -78,10 +76,8 @@ export const HowItWorks = () => {
           <Container>
             <Row justify="center">
               <Column lg={2}>1 of 3</Column>
-              <Column col md="auto">
-                Variable width content
-              </Column>
-              <Column>3 of 3</Column>
+              <Column md="auto">Variable width content</Column>
+              <Column lg={2}>3 of 3</Column>
             </Row>
           </Container>
         </SectionLayout>
