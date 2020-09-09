@@ -41,6 +41,12 @@ const getMediaQuery = (
   `);
 };
 
+const ColRoot = css`
+  position: relative;
+  padding: 0 ${GUTTER}px;
+  width: 100%;
+`;
+
 const SimpleCol = css`
   flex-basis: 0;
   flex-grow: 1;
@@ -55,7 +61,5 @@ export const Col = styled.div<{
   xl?: ColAttribute;
 }>`
   ${({sm, md, lg, xl}) => getMediaQuery(sm, md, lg, xl) || SimpleCol};
-  position: relative;
-  padding: 0 ${GUTTER}px;
-  width: 100%;
+  ${ColRoot};
 `;
