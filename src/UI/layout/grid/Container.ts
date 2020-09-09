@@ -11,7 +11,7 @@ import {GUTTER} from "../../theme/Theme";
 
 // with props use this:
 // ${props => mediaQueries("md")(`width: ${props.width}px`)}
-const media = css`
+const Media = css`
   ${makeQuery(__MEDIA_QUERY_BREAK_POINT.SMALL)(`
       max-width: ${SMALL_DEVICES_MAX_WIDTH}px
   `)};
@@ -29,11 +29,19 @@ const media = css`
   `)};
 `;
 
-export const Container = styled.div`
-  ${media};
+const ContainerRoot = css`
   padding-right: ${GUTTER}px;
   padding-left: ${GUTTER}px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+`;
+
+export const Container = styled.div<{fluid?: boolean}>`
+  ${props => (!props.fluid ? Media : null)};
+  ${ContainerRoot};
+`;
+
+export const ContainerFluid = styled.div`
+  ${ContainerRoot};
 `;

@@ -8,7 +8,7 @@ import {__GRAY_SCALE, SPACING} from "../../UI/theme/Theme";
 import {HowItWorks} from "./sections/HowItWorks";
 
 const MyContainer = styled(Container)`
-  margin-top: ${SPACING * 2}px;
+  background: beige;
 `;
 
 const Column = styled(Col)``;

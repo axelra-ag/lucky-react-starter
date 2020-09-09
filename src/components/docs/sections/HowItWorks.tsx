@@ -13,7 +13,7 @@ import {
 
 export const HowItWorks = () => {
   return (
-    <Flex flex={1} column>
+    <Flex flex={1} column style={{backgroundColor: "red"}}>
       <SectionTitle>How it works</SectionTitle>
       <SectionParagraph>
         Bootstrap’s grid system uses a series of containers, rows, and columns
@@ -25,16 +25,15 @@ export const HowItWorks = () => {
         New to or unfamiliar with flexbox? Read this CSS Tricks flexbox guide
         for background, terminology, guidelines, and code snippets.
       </SectionParagraph>
-      <SectionBox flex={1} column>
-        <Container>
-          <Row>
-            <Col>1 of 3</Col>
-            <Col>2 of 3</Col>
-            <Col>3 of 3</Col>
-          </Row>
-        </Container>
-        <SectionCode flex={1}>akofskoa</SectionCode>
-      </SectionBox>
+
+      <Container style={{backgroundColor: "blue"}}>
+        <Row>
+          <Col>1 of 3</Col>
+          <Col>2 of 3</Col>
+          <Col>3 of 3</Col>
+        </Row>
+      </Container>
+      <SectionCode flex={1}>akofskoa</SectionCode>
     </Flex>
   );
 };

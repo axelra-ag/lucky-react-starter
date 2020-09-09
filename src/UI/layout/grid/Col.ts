@@ -7,6 +7,7 @@ export const Col = styled.div`
   flex-grow: 1;
   min-height: 1px;
   flex-basis: 0;
-  max-width: 100%;
   padding: 0 ${GUTTER}px;
+  min-width: 0;
+  max-width: 100%;
 `;
