@@ -31,7 +31,6 @@ const media = css`
 
 export const Container = styled.div`
   ${media};
-  width: 100%;
   padding-right: ${SPACING}px;
   padding-left: ${SPACING}px;
   margin-right: auto;

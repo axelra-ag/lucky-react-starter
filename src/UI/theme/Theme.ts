@@ -53,10 +53,13 @@ export const GlobalStyle = createGlobalStyle<{
   html {
     font-family: ${(p: ThemeProviderProps<any>) => p.theme.fontFamily};
   }
-  body {
+  body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
     margin: 0;
-    font-weight: 500;
-    line-height: 1;
+    padding: 0;
+  }
+  html,body {
+    margin: 0;
+    padding: 0;
   }
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
