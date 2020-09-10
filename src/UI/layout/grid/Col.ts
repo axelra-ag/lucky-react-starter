@@ -1,8 +1,8 @@
 import styled, {css} from "styled-components";
 import {GUTTER} from "../../theme/Theme";
 import {__MEDIA_QUERY_BREAK_POINT, makeQuery} from "../media-query/Mobile";
-import {Flex} from "./Flex";
 
+const NUMBER_OF_COLUMNS = 12;
 type ColAttribute = number | boolean | "auto";
 
 const getBreakPoint = (
@@ -19,7 +19,7 @@ const getBreakPoint = (
 };
 
 const getDimension = (n: number) => {
-  return (n / 12) * 100;
+  return (n / NUMBER_OF_COLUMNS) * 100;
 };
 
 const getFlex = (t: ColAttribute) =>
@@ -48,12 +48,22 @@ const getMediaQuery = (
     return makeQuery(breakPoint)(SimpleCol);
   }
   return makeQuery(breakPoint)(`
-      flex: 0 0 ${getFlex((sm ? sm : md ? md : lg ? lg : xl) as ColAttribute)}; 
-      max-width: ${getMaxWidth(
-        (sm ? sm : md ? md : lg ? lg : xl) as ColAttribute
-      )};
-      width: ${getWidth((sm ? sm : md ? md : lg ? lg : xl) as ColAttribute)};  
+      flex: 0 0 ${getFlex((sm || md || lg || xl) as ColAttribute)}; 
+      max-width: ${getMaxWidth((sm || md || lg || xl) as ColAttribute)};
+      width: ${getWidth((sm || md || lg || xl) as ColAttribute)};  
   `);
+};
+
+const computeOffset = (
+  sm?: ColAttribute,
+  md?: ColAttribute,
+  lg?: ColAttribute,
+  xl?: ColAttribute,
+  offset?: number
+): string => {
+  if (!sm && !md && !lg && !xl) return "";
+  if (!offset) return "";
+  return "";
 };
 
 const getDefaultColCSS = (col: number) => css`
@@ -80,8 +90,10 @@ export const Col = styled.div<{
   xl?: ColAttribute;
   col?: number | boolean;
   order?: number;
+  offset?: number;
 }>`
   ${({sm, md, lg, xl}) => getMediaQuery(sm, md, lg, xl) || SimpleCol};
+  ${({sm, md, lg, xl, offset}) => computeOffset(sm, md, lg, xl, offset)};
   ${({col}) =>
     col
       ? Number.isInteger(col)
