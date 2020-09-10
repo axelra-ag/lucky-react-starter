@@ -53,9 +53,7 @@ const getMediaQuery = (
       width: ${getWidth((sm || md || lg || xl) as ColAttribute)};  
   `);
 };
-const getOffset = (t: number) => css`
-  margin-left: ${getDimension(t)}%;
-`;
+
 const computeOffset = (
   sm?: ColAttribute,
   md?: ColAttribute,
@@ -67,7 +65,9 @@ const computeOffset = (
   if (!breakPoint) return "";
   if (!sm && !md && !lg && !xl) return "";
   if (!offset) return "";
-  return makeQuery(breakPoint)(getOffset(offset));
+  return makeQuery(breakPoint)(
+    `margin-left: ${getDimension(offset as number)}%`
+  );
 };
 
 const getDefaultColCSS = (col: number) => css`

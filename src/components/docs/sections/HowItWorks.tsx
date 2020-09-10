@@ -129,6 +129,16 @@ export const HowItWorks = () => {
             </Row>
           </Container>
         </SectionLayout>
+        <SectionLayout>
+          <Container>
+            <Row>
+              <Column md={4}>md=4</Column>
+              <Column md={4} offset={1}>
+                md=4 with offset=4
+              </Column>
+            </Row>
+          </Container>
+        </SectionLayout>
       </SectionBox>
     </Flex>
   );
