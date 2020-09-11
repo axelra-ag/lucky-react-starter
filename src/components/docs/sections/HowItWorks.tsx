@@ -1,12 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {Flex} from "../../../UI/layout/grid/Flex";
-import {Container} from "../../../UI/layout/grid/Container";
-import {Row} from "../../../UI/layout/grid/Row";
-import {Col} from "../../../UI/layout/grid/Col";
-import {__COLORS, __GRAY_SCALE, GUTTER} from "../../../UI/theme/Theme";
+import {Col, Container, Flex, Row, Spacer} from "axelra-styled-bootstrap-grid";
+import {__GRAY_SCALE, GUTTER} from "../../../UI/theme/Theme";
 import {getAlphaColor} from "../../../helpers/get-alpha-color";
-import {Spacer} from "../../../UI/layout/spacer/Spacer";
 import {
   SectionBox,
   SectionLayout,
