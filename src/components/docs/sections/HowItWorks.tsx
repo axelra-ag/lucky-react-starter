@@ -21,6 +21,8 @@ const Column = styled(Col)`
   padding: ${GUTTER}px;
   background: ${getAlphaColor(0.1, __GRAY_SCALE._700)};
   border: 1px solid ${__GRAY_SCALE._400};
+  display: flex;
+  flex-direction: row;
 `;
 export const HowItWorks = () => {
   return (
@@ -41,13 +43,19 @@ export const HowItWorks = () => {
         <SectionLayout>
           <Container>
             <Row>
-              <Column>One of three columns</Column>
-              <Column>One of three columns</Column>
-              <Column>One of three columns</Column>
+              <Column>
+                <Flex row flex={1}>
+                  Hello 1
+                </Flex>
+                <Flex flex={2} row justify="center">
+                  <div>Hello 1</div>
+                  <div>Hello 1</div>
+                </Flex>
+              </Column>
             </Row>
           </Container>
         </SectionLayout>
-        <SectionLayout>
+        {/*<SectionLayout>
           <Container>
             <Row>
               <Column>1 of 2</Column>
@@ -141,7 +149,7 @@ export const HowItWorks = () => {
               </Column>
             </Row>
           </Container>
-        </SectionLayout>
+        </SectionLayout>*/}
       </SectionBox>
     </Flex>
   );
