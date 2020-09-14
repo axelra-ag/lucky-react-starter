@@ -4,9 +4,9 @@ import {
   Col,
   Container,
   Flex,
+  GUTTER,
   Row,
-  Spacer,
-  GUTTER
+  Spacer
 } from "axelra-styled-bootstrap-grid";
 import {getAlphaColor} from "../../../helpers/get-alpha-color";
 import {__GRAY_SCALE} from "../../../UI/theme/Theme";
@@ -27,7 +27,7 @@ const Column = styled(Col)`
 export const HowItWorks = () => {
   return (
     <Flex flex={1} column>
-      <SectionTitle>How it works</SectionTitle>
+      <SectionTitle>Axelra Grid Layout - How it works</SectionTitle>
       <SectionParagraph>
         Bootstrap’s grid system uses a series of containers, rows, and columns
         to layout and align content. It’s built with flexbox and is fully
@@ -41,21 +41,6 @@ export const HowItWorks = () => {
 
       <SectionBox flex={1} column>
         <SectionLayout>
-          <Container>
-            <Row>
-              <Column>
-                <Flex row flex={1}>
-                  Hello 1
-                </Flex>
-                <Flex flex={2} row justify="center">
-                  <div>Hello 1</div>
-                  <div>Hello 1</div>
-                </Flex>
-              </Column>
-            </Row>
-          </Container>
-        </SectionLayout>
-        {/*<SectionLayout>
           <Container>
             <Row>
               <Column>1 of 2</Column>
@@ -149,7 +134,7 @@ export const HowItWorks = () => {
               </Column>
             </Row>
           </Container>
-        </SectionLayout>*/}
+        </SectionLayout>
       </SectionBox>
     </Flex>
   );
