@@ -2365,10 +2365,10 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.10.1.tgz#e1e82e4f3e999e2cfd61b161280d16a111f86428"
   integrity sha512-zg7Hz2k5lI8kb7U32998pRRFin7zJlkfezGJjUc2heaD4Pw2wObakCDVzkKztTm/Ln7eiVvYsjqak0Ed4LkMDA==
 
-axelra-styled-bootstrap-grid@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/axelra-styled-bootstrap-grid/-/axelra-styled-bootstrap-grid-0.0.6.tgz#14b1529e9b55636787e4f7e429e35f2f109d85dc"
-  integrity sha512-EyaSeczttkGUTf41pK9dyVIYnau4qg2WlLaJtX9oNLZsMIGUQXKkACBfb0t9dlu9swvDwgKmXr6kMozzBUb61A==
+axelra-styled-bootstrap-grid@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/axelra-styled-bootstrap-grid/-/axelra-styled-bootstrap-grid-0.1.1.tgz#529bed0188a2198d636e0b43e74dd4d2322ad539"
+  integrity sha512-76akuEl3oOUc8SGP6/fR3b5TF8GflQ0/zEW6+zwhSQc2P+Y/XCgu/zUkRDU8X5lmbbaveGLEba30LkXOWMTdVg==
   dependencies:
     styled-components "^5.2.0"
 
