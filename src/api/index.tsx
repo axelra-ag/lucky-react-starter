@@ -3,7 +3,7 @@ import isEmpty from "lodash/isEmpty";
 import {useMemo} from "react";
 import {createRequest, HTTP_REQUEST_METHODS} from "../helpers/create-request";
 
-const baseURL = process.env.REACT_APP_API_ENDPOINT || "/api";
+export const baseURL = process.env.REACT_APP_API_ENDPOINT || "/api";
 
 const makeRequest = async (
   endpoint: string,
