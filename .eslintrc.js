@@ -525,6 +525,7 @@ module.exports = {
     camelcase: "off",
     // Prettier will take care of it
     "@typescript-eslint/indent": "off",
+
     "guard-for-in": "off",
     "react/forbid-component-props": "off",
     "no-console": "error",
@@ -604,13 +605,6 @@ module.exports = {
     "promise/no-nesting": "error",
     "promise/no-promise-in-callback": "error",
     "promise/valid-params": "error",
-    "no-shadow": [
-      "error",
-      {
-        builtinGlobals: false,
-        hoist: "all"
-      }
-    ],
     // Leads to errors like <>'     '</>
     "react/jsx-fragments": "off",
     "react/jsx-closing-tag-location": "off",
@@ -652,12 +646,13 @@ module.exports = {
     ],
 
     quotes: "off",
-    "@typescript-eslint/explicit-function-return-type": 0,
     "prettier/prettier": "error",
     "import/extensions": "off",
     "@typescript-eslint/no-use-before-define": 0,
     "import/no-unassigned-import": 0,
-    "@typescript-eslint/no-explicit-any": 0
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   },
   settings: {
     react: {

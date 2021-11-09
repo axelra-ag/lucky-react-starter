@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {H1, P} from "axelra-styled-bootstrap-grid/dist/content/Typography";
 import {Flex} from "axelra-styled-bootstrap-grid";
-import {__GRAY_SCALE, SPACING} from "../../../UI/theme/Theme";
+import {__GRAY_SCALE, SPACING} from "../../../UI/theme/theme";
 
 export const SectionTitle = styled(H1)``;
 

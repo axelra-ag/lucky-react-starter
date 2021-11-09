@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Col, Container, Row, Spacer} from "axelra-styled-bootstrap-grid";
-import {SPACING} from "../../UI/theme/Theme";
+import {SPACING} from "../../UI/theme/theme";
 import {HowItWorks} from "./sections/HowItWorks";
 
 const MyContainer = styled(Container)`

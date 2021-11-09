@@ -1,9 +1,9 @@
 import React from "react";
 import {
   BrowserRouter as Router,
-  Redirect,
+  Navigate,
   Route,
-  Switch
+  Routes
 } from "react-router-dom";
 import {Documentation} from "../components/docs/Documentation";
 import {DOCUMENTATION} from "./Routes";
@@ -11,15 +11,11 @@ import {DOCUMENTATION} from "./Routes";
 const MainRouter = () => {
   return (
     <Router>
-      <Switch>
-        <Route component={Documentation} path={DOCUMENTATION} exact />
+      <Routes>
+        <Route element={<Documentation />} path={DOCUMENTATION} />
         {/*Intentionally left at the bottom*/}
-        <Route
-          exact
-          path={"/*"}
-          render={() => <Redirect to={DOCUMENTATION} />}
-        />
-      </Switch>
+        <Route path={"/*"} element={<Navigate to={DOCUMENTATION} />} />
+      </Routes>
     </Router>
   );
 };

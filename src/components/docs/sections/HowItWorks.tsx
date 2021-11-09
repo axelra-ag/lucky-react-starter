@@ -9,7 +9,7 @@ import {
   Spacer
 } from "axelra-styled-bootstrap-grid";
 import {getAlphaColor} from "../../../helpers/get-alpha-color";
-import {__GRAY_SCALE} from "../../../UI/theme/Theme";
+import {__GRAY_SCALE} from "../../../UI/theme/theme";
 import {
   SectionBox,
   SectionLayout,
@@ -62,7 +62,7 @@ export const HowItWorks = () => {
             <Spacer x1 />
             <Row>
               <Column>1 of 3</Column>
-              <Column col={5}>2 of 3 (wider)</Column>
+              <Column xs={5}>2 of 3 (wider)</Column>
               <Column>3 of 3</Column>
             </Row>
           </Container>
@@ -70,11 +70,11 @@ export const HowItWorks = () => {
         <SectionLayout>
           <Container>
             <Row justify="center">
-              <Column lg={2} col>
+              <Column lg={2} xs>
                 1 of 3
               </Column>
               <Column md="auto">Variable width content</Column>
-              <Column lg={2} col>
+              <Column lg={2} xs>
                 3 of 3
               </Column>
             </Row>
@@ -100,28 +100,28 @@ export const HowItWorks = () => {
         <SectionLayout>
           <Container>
             <Row>
-              <Column col={12} md={8}>
+              <Column xs={12} md={8}>
                 xs=12 md=8
               </Column>
-              <Column col={6} md={4}>
+              <Column xs={6} md={4}>
                 xs=6 md=4
               </Column>
             </Row>
             <Spacer x1 />
             <Row>
-              <Column col={6} md={4}>
+              <Column xs={6} md={4}>
                 xs=6 md=4
               </Column>
-              <Column col={6} md={4}>
+              <Column xs={6} md={4}>
                 xs=6 md=4
               </Column>
-              <Column col={6} md={4}>
+              <Column xs={6} md={4}>
                 xs=6 md=4
               </Column>
             </Row>
             <Row>
-              <Column col={6}>xs=6 </Column>
-              <Column col={6}>xs=6 </Column>
+              <Column xs={6}>xs=6 </Column>
+              <Column xs={6}>xs=6 </Column>
             </Row>
           </Container>
         </SectionLayout>
